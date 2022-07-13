@@ -28,7 +28,7 @@ const deleteProduct = async (req, reply) => {
 const updateProduct = async (req, reply) => {
   try {
     const product = await Product.findByIdAndUpdate(req.params.id, req.body, {
-      nem: true,
+      new: true,
     });
     reply.code(200).send(product);
   } catch (err) {
